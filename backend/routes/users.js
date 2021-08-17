@@ -7,10 +7,10 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.post('/signUp', function (req, res) {
+router.post('/sign', function (req, res) {
   const user = {
     'name': req.body.user.name,
-    'password': req.body.user.password
+    'password': req.body.user.pw,
   };
 
       const salt = bcrypt.genSaltSync();
